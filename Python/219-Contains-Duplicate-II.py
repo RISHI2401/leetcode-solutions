@@ -4,7 +4,7 @@ def containsNearbyDuplicate(nums : list[int], k : int) -> bool:
 
   for index, num in enumerate(nums):
 
-    if nums[index] in hashmap and index - hashmap[nums[index]] <= k:
+    if num in hashmap and index - hashmap[num] <= k:
       return True
     else:
       hashmap[num] = index
